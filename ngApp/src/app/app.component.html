@@ -1,0 +1,8 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<ul class="navbar-nav">
+  <a *ngIf="!_authService.isUserLogged()" class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+  <a *ngIf="!_authService.isUserLogged()" class="nav-link" routerLink="/register" routerLinkActive="active">register</a>
+  <a class="nav-link" style="cursor:pointer" *ngIf="_authService.isUserLogged()" (click)="_authService.logoutUser()">SALLLLLLIIIIIIIIIIIIIIIR</a>
+</ul>
+</nav>
+<router-outlet></router-outlet>
